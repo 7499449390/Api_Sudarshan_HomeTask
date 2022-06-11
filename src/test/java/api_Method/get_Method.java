@@ -14,7 +14,7 @@ public class get_Method {
     public void getResponsetest() throws IOException {
       API_Utilities.readPropertyFile();
       API_Utilities.urlSetup();
-      System.out.println(api_file.getProperty("base_url"));
+//      System.out.println(api_file.getProperty("base_url"));
       String endpoint=API_Utilities.api_file.getProperty("create_user_end_point");
       RequestSpecification requestSpecification=RestAssured.given();
       Response response=requestSpecification.get(endpoint);

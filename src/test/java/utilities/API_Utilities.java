@@ -21,10 +21,10 @@ public class API_Utilities {
         api_file.load(file);
         System.out.println(file);
     }
-    public static void urlSetup(){
+    public static void urlSetup()
+    {
         RestAssured.baseURI=api_file.getProperty("base_url");
     }
-
     public static Response postRequest(String body,String endpoint){
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.header("Accept","application/json");
