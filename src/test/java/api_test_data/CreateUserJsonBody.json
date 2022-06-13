@@ -1,6 +1,9 @@
 {
   "name":"sudarshanK",
-  "email":"Ksudarshan@test",
-  "status":"Inactive"
+  "email":"Ksudarshan@test.com",
+  "status":"Inactive",
+  "job": "QA",
+  "gender": "Male"
+
 }
 

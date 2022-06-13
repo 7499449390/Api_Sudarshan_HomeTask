@@ -1,17 +1,14 @@
 package utilities;
 
-
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.internal.RequestSpecificationImpl;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.simple.JSONObject;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 public class API_Utilities {
     public static Properties api_file;
     public static Response response;
@@ -23,9 +20,16 @@ public class API_Utilities {
     }
     public static void urlSetup()
     {
+        //Specify base URI
         RestAssured.baseURI=api_file.getProperty("base_url");
     }
+    public static void urlSetup1()
+    {
+        //Specify base URI
+        RestAssured.baseURI=api_file.getProperty("base_url1");
+    }
     public static Response postRequest(String body,String endpoint){
+        //Response object
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.header("Accept","application/json");
         requestSpecification.header("Content-Type","application/json");
@@ -33,12 +37,5 @@ public class API_Utilities {
         Response response=requestSpecification.post(endpoint);
         return response;
     }
-
-
-
-
-
-
-
 
 }
